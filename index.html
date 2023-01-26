@@ -36,8 +36,7 @@
         <span>          
           We introduce Noise2Music, where a series of diffusion models is trained to generate high-quality 30-second music clips from text prompts. Two types of diffusion models, a generator model, which generates an intermediate representation conditioned on text, and a cascader model, which generates high-fidelity audio conditioned on the intermediate representation and possibly the text, are trained and utilized in succession to generate high-fidelity music.
           <br><br>
-          We explore two options for the intermediate representation, one using a spectrogram and the other using audio with lower fidelity. We find that the generated audio is able to faithfully reflect key elements of the text prompt such as genre, mood, tempo, and instruments. Pretrained large language models play a key role in this story---they are used to generate paired text for the audio of the training set and to extract embeddings of the text prompts ingested by the diffusion models.
-
+          We explore two options for the intermediate representation, one using a spectrogram and the other using audio with lower fidelity. We find that the generated audio is not only able to faithfully reflect key elements of the text prompt such as genre, tempo, instruments, mood and era, but goes beyond to ground fine-grained semantics of the prompt. Pretrained large language models play a key role in this story---they are used to generate paired text for the audio of the training set and to extract embeddings of the text prompts ingested by the diffusion models.
         </span>
       </div> 
 
@@ -47,7 +46,7 @@
         <br>
         We randomly sampled 1000 prompts from music descriptive sentences that are not seen during training.
         For each prompt, we generate one audio clip with Waveform Model and Spectrogram Model, separately.
-        We show the top 30 prompts and the corresponding generated examples with the highest MuLan similarity scores.
+        We show the top 50 prompts and the corresponding generated examples with the highest MuLan similarity scores.
         <table class="table table-responsive">
           <thead>
             <tr class="text-center">
